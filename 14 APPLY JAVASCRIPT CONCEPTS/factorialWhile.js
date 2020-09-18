@@ -1,24 +1,25 @@
-function calcFactorial(num) {
+// factorial of 4: 4! => 1*2*3*4;
+
+function calcFactorial(n) {
     let i = 1;
     let factorial = 1;
-    while(i <=num) {
+    while(i <=n) {
+        factorial *= i;
+        console.log(i, factorial);
         i++;
-        factorial = factorial*i;
-        console.log(i,factorial);
     }
 }
+calcFactorial(5)
 
-calcFactorial(10);
 
-
-// function calcFactorial2(n) {
+// function calcFactorial(n) {
 //     let i = n;
 //     let factorial = 1;
-//     while(i > 0) {
-//         factorial = factorial*i;
-//         console.log(i,factorial);
+//     while(i>=1) {
+//         factorial *= i;
+//         console.log(i, factorial);
 //         i--;
 //     }
 // }
 
-// calcFactorial2(15);
+// calcFactorial(4)
