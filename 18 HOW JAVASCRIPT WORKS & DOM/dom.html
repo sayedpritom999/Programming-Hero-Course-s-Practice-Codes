@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            border: 2px solid tomato;
+            border-radius: 20px;
+            margin: 5px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h1 id="first">Exploring DOM</h1>
+            <article>
+                <h3 id="first-article">article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum enim pariatur in aliquid, fuga odio quia cupiditate earum distinctio eveniet iusto officiis tempora, tempore nulla velit et explicabo. Ipsa, quod?</p>
+            </article>
+            <article class="special">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Fuga voluptatibus provident vel iure perferendis voluptatem numquam maxime eos illo earum? Eum facilis, debitis cupiditate odio nihil libero. Vero architecto magnam rerum minus placeat aut eveniet molestiae delectus nisi.</p>
+            </article>
+            <article class="special">
+                <h3 >article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Animi quibusdam quis similique laboriosam magni. Aperiam modi minus deleniti voluptas nostrum placeat ea nam culpa maiores saepe reprehenderit repellendus dolorem sit voluptatem, beatae perspiciatis facilis nihil quae vel natus.</p>
+            </article>
+        </section>
+    </main>
+    <script>
+        document.querySelector('h3').setAttribute('title', 'Hi');
+        document.getElementById('first-article').setAttribute('title', 'Hello');
+        const author = document.querySelectorAll('.special h3');
+        for (let i = 0; i < author.length; i++) {
+            const element = author[i];
+            console.log(element.innerHTML);
+            element.innerHTML = "Writer-"+(1+i);
+            element.style.backgroundColor = "cyan";
+        }
+    </script>
+</body>
+</html>

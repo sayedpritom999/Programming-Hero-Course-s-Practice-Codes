@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <button id="btn">Click Me</button>
+    <button id="btn2">Click Me</button>
+<script>
+    handleClick = () => {
+        document.body.style.backgroundColor = 'cyan';
+    }
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', handleClick)
+    btn.onclick = handleClick;
+    document.getElementById('btn2').addEventListener('click', ()=>{document.body.style.color= 'tomato'})
+</script>
+</body>
+</html>
